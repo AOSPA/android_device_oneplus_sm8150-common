@@ -5,3 +5,7 @@
 /op1(/.*)?               u:object_r:op1_file:s0
 /op2(/.*)?               u:object_r:op2_file:s0
 /persist(/.*)?           u:object_r:persist_file:s0
+
+# Modules
+/system/lib/modules/wlan\.ko    u:object_r:vendor_file:s0
+
