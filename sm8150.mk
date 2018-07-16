@@ -63,6 +63,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@5.0 \
