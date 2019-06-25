@@ -162,6 +162,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl.oneplus_msmnile \
+    android.hardware.sensors@1.0-service.oneplus_msmnile \
+
 # QTI common
 -include vendor/qcom/common/*/qti-*.mk
 
