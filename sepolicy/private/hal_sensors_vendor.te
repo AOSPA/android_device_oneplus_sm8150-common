@@ -1,0 +1,53 @@
+type hal_sensors_vendor, domain;
+hal_server_domain(hal_sensors_vendor, hal_sensors)
+
+type hal_sensors_vendor_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_sensors_vendor)
+
+hal_client_domain(hal_sensors_vendor, hal_graphics_allocator)
+
+typeattribute hal_sensors_vendor binder_in_vendor_violators;
+
+# Allow hal_sensors_default to use binder service
+binder_use(hal_sensors_vendor)
+
+# Allow binder communication with surfaceflinger
+binder_call(hal_sensors_vendor, surfaceflinger)
+
+allow hal_sensors_vendor hal_sensors_vendor:qipcrtr_socket { read create getattr write setopt };
+
+allow hal_sensors_vendor binder_device:chr_file rw_file_perms;
+allow hal_sensors_vendor diag_device:chr_file rw_file_perms;
+allow hal_sensors_vendor ion_device:chr_file r_file_perms;
+allow hal_sensors_vendor gpu_device:chr_file rw_file_perms;
+allow hal_sensors_vendor oem_audio_device:chr_file rw_file_perms;
+
+allow hal_sensors_vendor oem_file:file { read open getattr };
+allow hal_sensors_vendor oem_file:dir { search };
+
+allow hal_sensors_vendor persist_sensors_file:file { read open getattr append };
+allow hal_sensors_vendor persist_sensors_file:dir search;
+
+allow hal_sensors_vendor sysfs_graphics:dir search;
+allow hal_sensors_vendor sysfs_graphics:file rw_file_perms;
+
+allow hal_sensors_vendor proc:file r_file_perms;
+allow hal_sensors_vendor proc_touchpanel:file r_file_perms;
+allow hal_sensors_vendor proc_touchpanel:dir { search };
+
+allow hal_sensors_vendor hal_graphics_mapper_hwservice:hwservice_manager find;
+allow hal_sensors_vendor hal_graphics_allocator_hwservice:hwservice_manager find;
+
+allow hal_sensors_vendor surfaceflinger_service:service_manager find;
+
+allow hal_sensors_vendor fwk_scheduler_hwservice:hwservice_manager find;
+
+allow hal_sensors_vendor input_device:dir r_dir_perms;
+allow hal_sensors_vendor input_device:chr_file r_file_perms;
+
+# allow sensor hal to use lock for keeping system awake for wake up
+# events delivery.
+wakelock_use(hal_sensors_vendor);
+
+get_prop(hal_sensors_vendor, boottime_prop);
+get_prop(hal_sensors_vendor, vendor_sensors_prop);
