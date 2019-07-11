@@ -1,6 +1,12 @@
 # Audio
 /system/etc/audio_policy_configuration.xml    u:object_r:system_configs_file:s0
 
+# Devices
+/dev/audio_ultrasound     u:object_r:ultrasound_device:s0
+/dev/elliptic0            u:object_r:sensors_device:s0
+/dev/elliptic1            u:object_r:sensors_device:s0
+/dev/sensor_ultrasound    u:object_r:ultrasound_device:s0
+
 # Files in rootfs
 /bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
 /dsp(/.*)?               u:object_r:adsprpcd_file:s0
@@ -14,6 +20,9 @@
 
 # Lights
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.light@2\.0-service    u:object_r:hal_light_default_exec:s0
+
+# Sensors
+/(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.sensors@1\.0-service    u:object_r:hal_sensors_default_exec:s0
 
 # HALs
 /system/bin/hw/vendor\.pa\.biometrics\.fingerprint\.inscreen@1.0-service\.oneplus_msmnile    u:object_r:hal_fod_msmnile_exec:s0
