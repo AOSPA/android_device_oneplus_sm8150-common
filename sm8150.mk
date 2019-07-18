@@ -92,7 +92,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.sm8150 \
+    bootctrl.msmnile \
     libcutils \
     libgptutils \
     libz \
