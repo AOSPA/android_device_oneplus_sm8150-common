@@ -54,9 +54,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@4.0 \
     libaudio-resampler
 
-PRODUCT_COPY_FILES += \
-    hardware/qcom/audio/configs/msmnile/audio_policy.conf:system/etc/audio_policy.conf
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbluetooth_qti \
