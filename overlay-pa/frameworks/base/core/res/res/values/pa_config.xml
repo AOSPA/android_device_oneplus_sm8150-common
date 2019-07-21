@@ -62,7 +62,7 @@
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>co.aoscp.device.TriStateHandler</item>
+        <item>co.aospa.device.TriStateHandler</item>
     </string-array>
 
 </resources>
