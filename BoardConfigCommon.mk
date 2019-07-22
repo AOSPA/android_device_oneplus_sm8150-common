@@ -159,7 +159,8 @@ DISABLE_EAP_PROXY := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 
 # Inherit from the proprietary version
 -include vendor/oneplus/sm8150-common/BoardConfigVendor.mk
