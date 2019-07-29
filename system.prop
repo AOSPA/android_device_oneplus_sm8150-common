@@ -282,3 +282,6 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 # OnePlus sensors
 ro.sensor.pickup=oneplus.sensor.pickup
 ro.sensor.pocket=oneplus.sensor.op_motion_detect
+
+# PASR
+vendor.power.pasr.enabled=true
