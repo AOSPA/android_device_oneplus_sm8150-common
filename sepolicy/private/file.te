@@ -8,3 +8,7 @@ type persist_file, file_type;
 
 # proc
 type proc_touchpanel, fs_type, proc_type;
+
+type sysfs_fod, sysfs_type, fs_type;
+type sysfs_graphics, sysfs_type, fs_type;
+type sysfs_oem, sysfs_type, fs_type;
