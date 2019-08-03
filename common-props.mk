@@ -13,7 +13,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.af.client_heap_size_kbyte=7168 \
     ro.qc.sdk.audio.fluencetype=none \
     ro.qc.sdk.audio.ssr=false \
-    use.voice.path.for.pcm.voip=true
+    use.voice.path.for.pcm.voip=true \
+    ro.audio.monitorRotation=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -23,14 +24,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.library_name=libbluetooth_qti.so \
     vendor.bluetooth.soc=cherokee
 
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.camera.oissr.debug=0
+
 # CNE / DPM
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1 \
     persist.vendor.dpm.feature=9
-
-# Coresight
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.debug.coresight.config=stm-events
 
 # Data modules
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -39,6 +40,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.data.mode=concurrent \
     persist.vendor.data.iwlan.enable=true \
     ro.vendor.use_data_netmgrd=true
+
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.enable_rotator_ui=1 \
+    ro.sensor.not_support_rbg=1 \
+    ro.vendor.sensor.not_support_rbg=1
+
+# Google Keyboard padding
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.ime.kb_pad_port_b=24 \
+    ro.com.google.ime.kb_pad_port_l=7 \
+    ro.com.google.ime.kb_pad_port_r=7
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -60,7 +73,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-scan=true \
     mm.enable.smoothstreaming=true \
     mmp.enable.3g2=true \
-    persist.mm.enable.prefetch=true
+    persist.mm.enable.prefetch=true \
+    vendor.mm.enable.qcom_parser=67092479 \
+    vendor.vidc.debug.level=1 \
+    vendor.swvdec.log.level=1
 
 # Netflix
 ro.netflix.bsp_rev=Q855-16947-1
@@ -72,9 +88,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.core_ctl_min_cpu=2 \
     ro.vendor.qti.sys.fw.bservice_age=5000 \
     ro.vendor.qti.sys.fw.bservice_enable=true \
-    ro.vendor.qti.sys.fw.bservice_limit=5 \
+    ro.vendor.qti.sys.fw.bservice_limit=8 \
     vendor.iop.enable_uxe=1 \
-    vendor.perf.iop_v3.enable=1
+    vendor.perf.iop_v3.enable=true \
+    vendor.perf.gestureflingboost.enable=true \
+    vendor.perf.workloadclassifier.enable=true
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -93,16 +111,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     ro.telephony.default_network=22,22 \
     ro.vendor.use_data_netmgrd=true \
-    telephony.lteOnCdmaDevice=1,1
+    telephony.lteOnCdmaDevice=1,1 \
+    persist.radio.efssync=true \
+    persist.vendor.radio.arfcn_test_mode=3 \
+    persist.radio.enhance_ecall=true \
+    persist.netmon.linger=5000 \
+    persist.rcs.supported=1 \
+    persist.vendor.radio.apm_sim_not_pwdn=1
+
+# Sensors
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.naruto.light.support=false
 
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
-
-# Touchscreen
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.qti.inputopts.enable=true \
-    persist.vendor.qti.inputopts.movetouchslop=0.6
 
 # WiFi / WFD
 PRODUCT_PROPERTY_OVERRIDES += \
