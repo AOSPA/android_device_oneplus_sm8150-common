@@ -88,11 +88,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.core_ctl_min_cpu=2 \
     ro.vendor.qti.sys.fw.bservice_age=5000 \
     ro.vendor.qti.sys.fw.bservice_enable=true \
-    ro.vendor.qti.sys.fw.bservice_limit=8 \
-    vendor.iop.enable_uxe=1 \
-    vendor.perf.iop_v3.enable=true \
-    vendor.perf.gestureflingboost.enable=true \
-    vendor.perf.workloadclassifier.enable=true
+    ro.vendor.qti.sys.fw.bservice_limit=8
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
