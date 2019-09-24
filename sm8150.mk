@@ -19,11 +19,12 @@ $(call inherit-product-if-exists, vendor/oneplus/sm8150-common/sm8150-common-ven
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pa
+    $(LOCAL_PATH)/overlay
 
 # Properties
 -include $(LOCAL_PATH)/common-props.mk
+
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -113,7 +114,9 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
 
 # Perf
--include vendor/qcom/common/qti-vendor.mk
+-include vendor/qcom/common/av/qti-av.mk
+-include vendor/qcom/common/bt/qti-bt.mk
+-include vendor/qcom/common/perf/qti-perf.mk
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -135,7 +138,6 @@ PRODUCT_PACKAGES += \
 
 # Update engine
 PRODUCT_PACKAGES += \
-    brillo_update_payload \
     update_engine \
     update_engine_sideload \
     update_verifier
@@ -162,5 +164,24 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
+
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml
+
+HIDL_WRAPPER := qti-telephony-hidl-wrapper
+HIDL_WRAPPER += qti_telephony_hidl_wrapper.xml
+
+QTI_TELEPHONY_UTILS := qti-telephony-utils
+QTI_TELEPHONY_UTILS += qti_telephony_utils.xml
+
+PRODUCT_PACKAGES += $(HIDL_WRAPPER)
+PRODUCT_PACKAGES += $(QTI_TELEPHONY_UTILS)
+
+PRODUCT_PACKAGES += libvndfwk_detect_jni.qti
+PRODUCT_PACKAGES += libqti_vndfwk_detect
+PRODUCT_PACKAGES += libvndfwk_detect_jni.qti.vendor
+PRODUCT_PACKAGES += libqti_vndfwk_detect.vendor

@@ -7,4 +7,3 @@ allow init vendor_configs_file:file mounton;
 allow init sysfs_oem:file w_file_perms;
 allow vendor_init persist_file:lnk_file r_file_perms;
 allow init sysfs_fod:file setattr;
-
