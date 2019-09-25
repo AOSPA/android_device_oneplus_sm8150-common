@@ -19,7 +19,8 @@ $(call inherit-product-if-exists, vendor/oneplus/sm8150-common/sm8150-common-ven
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-pa
 
 # Properties
 -include $(LOCAL_PATH)/common-props.mk
@@ -50,10 +51,10 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@4.0 \
-    android.hardware.audio.common@4.0 \
-    android.hardware.audio.common@4.0-util \
-    android.hardware.audio.effect@4.0 \
+    android.hardware.audio@5.0 \
+    android.hardware.audio.common@5.0 \
+    android.hardware.audio.common@5.0-util \
+    android.hardware.audio.effect@5.0 \
     libaudio-resampler
 
 PRODUCT_COPY_FILES += \
@@ -103,6 +104,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0 \
     android.hardware.nfc@1.1 \
+    android.hardware.nfc@1.2 \
     android.hardware.secure_element@1.0 \
     com.android.nfc_extras \
     Tag \
@@ -112,11 +114,6 @@ PRODUCT_PACKAGES += \
 # NN
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
-
-# Perf
--include vendor/qcom/common/av/qti-av.mk
--include vendor/qcom/common/bt/qti-bt.mk
--include vendor/qcom/common/perf/qti-perf.mk
 
 # Permissions
 PRODUCT_COPY_FILES += \

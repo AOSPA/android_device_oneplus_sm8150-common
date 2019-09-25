@@ -1,5 +1,5 @@
 # Audio
-/system/etc/audio_policy_configuration.xml    u:object_r:vendor_configs_file:s0
+/system/etc/audio_policy_configuration.xml    u:object_r:system_configs_file:s0
 
 # Files in rootfs
 /bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
@@ -10,13 +10,13 @@
 /persist(/.*)?           u:object_r:persist_file:s0
 
 # Modules
-/system/lib/modules/wlan\.ko    u:object_r:vendor_file:s0
+/system/lib/modules/wlan\.ko    u:object_r:system_file:s0
 
 # Lights
 /system/bin/hw/android\.hardware\.light@2\.0-service\.oneplus_msmnile    u:object_r:hal_light_msmnile_exec:s0
 
 # HALs
-/system/bin/hw/vendor\.pa\.biometrics\.fingerprint\.inscreen@1.0-service\.oneplus_msmnile    u:object_r:hal_fod_msmnile_exec:s0
+#/system/bin/hw/vendor\.pa\.biometrics\.fingerprint\.inscreen@1.0-service\.oneplus_msmnile    u:object_r:hal_fod_msmnile_exec:s0
 
 # tri-state-key
 /system/bin/tri-state-key_daemon          u:object_r:tri-state-key_daemon_exec:s0

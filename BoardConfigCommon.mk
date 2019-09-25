@@ -151,6 +151,9 @@ BOARD_ROOT_EXTRA_SYMLINKS := /vendor/dsp:/dsp /vendor/firmware_mnt:/firmware /ve
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 
+# SELinux
+PRIVATE_EXCLUDE_BUILD_TEST := true
+
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
