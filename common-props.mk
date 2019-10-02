@@ -14,7 +14,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=none \
     ro.qc.sdk.audio.ssr=false \
     use.voice.path.for.pcm.voip=true \
-    ro.audio.monitorRotation=true
+    ro.audio.monitorRotation=true \
+    persist.vendor.audio.hac.enable=false
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -22,12 +23,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
     persist.vendor.btstack.enable.splita2dp=true \
     ro.bluetooth.library_name=libbluetooth_qti.so \
-    vendor.bluetooth.soc=cherokee
+    vendor.bluetooth.soc=cherokee \
+    persist.vendor.btstack.enable.twsplus=true
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.oissr.debug=0 \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.factorymode,com.oneplus.camera,com.oneplus.healthcheck
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.factorymode,com.oneplus.camera,com.oneplus.healthcheck \
+    persist.vendor.camera.privapp.list=com.oneplus.camera
 
 # CNE / DPM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -47,12 +50,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_rotator_ui=1 \
     ro.sensor.not_support_rbg=1 \
     ro.vendor.sensor.not_support_rbg=1
-
-# Google Keyboard padding
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.ime.kb_pad_port_b=24 \
-    ro.com.google.ime.kb_pad_port_l=7 \
-    ro.com.google.ime.kb_pad_port_r=7
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
