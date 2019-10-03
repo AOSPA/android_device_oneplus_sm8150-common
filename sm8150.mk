@@ -99,19 +99,15 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    NQNfcNci \
     android.hardware.nfc@1.0 \
     android.hardware.nfc@1.1 \
     android.hardware.nfc@1.2 \
     android.hardware.secure_element@1.0 \
+    android.hardware.secure_element@1.1 \
     com.android.nfc_extras \
-    com.nxp.nfc.nq \
-    libnqnfc-nci \
-    libnqnfc_nci_jni \
     Tag \
     vendor.nxp.nxpese@1.0 \
-    vendor.nxp.nxpnfc@1.0 \
-    vendor.nxp.hardware.nfc@1.2-service
+    vendor.nxp.nxpnfc@1.0
 
 # NN
 PRODUCT_PACKAGES += \
