@@ -26,7 +26,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.oissr.debug=0
+    persist.vendor.camera.oissr.debug=0 \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.factorymode,com.oneplus.camera,com.oneplus.healthcheck
 
 # CNE / DPM
 PRODUCT_PROPERTY_OVERRIDES += \
