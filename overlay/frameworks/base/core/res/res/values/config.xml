@@ -71,5 +71,8 @@
          1 - The device DOES have a permanent menu key; ignore autodetection.
          2 - The device DOES NOT have a permanent menu key; ignore autodetection. -->
     <integer name="config_overrideHasPermanentMenuKey">2</integer>
-    
+
+    <!-- Whether the always on display mode is available. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
 </resources>
