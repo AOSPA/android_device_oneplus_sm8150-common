@@ -381,7 +381,7 @@
                        sources="Telephony Rx"/>
 <!-- liuhaituo@MM.Audio, 2019.7.4, add for support built Mic and back Mic use 16_bit record  -->
                 <!-- <route type="mix" sink="primary input"
-                       sources="Wired Headset Mic,BT SCO Headset Mic,FM Tuner,USB Device In,USB Headset In,Telephony Rx"/> -->
+                       sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,FM Tuner,USB Device In,USB Headset In,Telephony Rx"/> -->
                 <route type="mix" sink="primary input"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,FM Tuner,USB Device In,USB Headset In,Telephony Rx"/>
 <!-- add end -->
