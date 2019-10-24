@@ -131,3 +131,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.emb_wp_mode=false \
     ro.bluetooth.wipower=false
+
+# OnePlus sensors
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sensor.pickup=oneplus.sensor.pickup \
+    ro.sensor.pocket=oneplus.sensor.pocket

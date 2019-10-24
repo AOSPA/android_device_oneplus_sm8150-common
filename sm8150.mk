@@ -113,6 +113,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
 
+# ParanoidDoze
+PRODUCT_PACKAGES += ParanoidDoze
+
 # Performance
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/msm_irqbalance.conf
