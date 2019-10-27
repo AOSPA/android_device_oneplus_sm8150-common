@@ -178,6 +178,9 @@ TARGET_NO_RECOVERY := false
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstabDyn.qcom
 endif
 
+# RIL
+TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD := true
+
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := odm op1 op2
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/dsp:/dsp /vendor/firmware_mnt:/firmware /vendor/bt_firmware:/bt_firmware /mnt/vendor/persist:/persist
