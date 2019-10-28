@@ -82,7 +82,6 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 ifeq ($(HOST_OS),linux)
     ifneq ($(TARGET_BUILD_VARIANT),eng)
       WITH_DEXPREOPT ?= true
-      WITH_DEXPREOPT_PIC := false
     endif
 endif
 
