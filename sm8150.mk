@@ -25,6 +25,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-pa
 
+PRODUCT_PACKAGES += \
+    SM8150CommonFrameworkRes
+
 # Properties
 -include $(LOCAL_PATH)/common-props.mk
 
