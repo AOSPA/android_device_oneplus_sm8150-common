@@ -18,6 +18,7 @@
 
 #include "FingerprintInscreen.h"
 #include <android-base/logging.h>
+#include <android-base/properties.h>
 #include <hidl/HidlTransportSupport.h>
 #include <fstream>
 
@@ -44,6 +45,10 @@ namespace inscreen {
 namespace V1_0 {
 namespace implementation {
 
+bool isOneplus7tpro;
+
+using android::base::GetProperty;
+
 /*
  * Write value to path and close file.
  */
@@ -65,6 +70,8 @@ static T get(const std::string& path, const T& def) {
 FingerprintInscreen::FingerprintInscreen() {
     this->mVendorFpService = IVendorFingerprintExtensions::getService();
     this->mVendorDisplayService = IOneplusDisplay::getService();
+    std::string device = android::base::GetProperty("ro.product.device", "");
+    isOneplus7tpro = device == "OnePlus7TPro";
 }
 
 Return<void> FingerprintInscreen::onStartEnroll() {
@@ -181,15 +188,27 @@ Return<void> FingerprintInscreen::setCallback(const sp<IFingerprintInscreenCallb
 }
 
 Return<int32_t> FingerprintInscreen::getPositionX() {
-    return FOD_POS_X;
+    if (isOneplus7tpro) {
+        return 605;
+    } else {
+        return FOD_POS_X;
+    }
 }
 
 Return<int32_t> FingerprintInscreen::getPositionY() {
-    return FOD_POS_Y;
+    if (isOneplus7tpro) {
+        return 2612;
+    } else {
+        return FOD_POS_Y;
+    }
 }
 
 Return<int32_t> FingerprintInscreen::getSize() {
-    return FOD_SIZE;
+    if (isOneplus7tpro) {
+        return 273;
+    } else {
+        return FOD_SIZE;
+    }
 }
 
 }  // namespace implementation
