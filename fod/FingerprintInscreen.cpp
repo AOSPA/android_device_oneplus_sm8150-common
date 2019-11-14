@@ -104,12 +104,27 @@ Return<void> FingerprintInscreen::onRelease() {
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
+    this->mVendorDisplayService->setMode(7, 0);
+    this->mVendorDisplayService->setMode(16, 0);
+    this->mVendorDisplayService->setMode(17, 0);
+    this->mVendorDisplayService->setMode(18, 0);
+    this->mVendorDisplayService->setMode(20, 0);
+    this->mVendorDisplayService->setMode(21, 0);
+    this->mVendorDisplayService->setMode(17, 1);
+    this->mVendorDisplayService->setMode(19, 0);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onHideFODView() {
     this->mVendorDisplayService->setMode(OP_DISPLAY_AOD_MODE, 0);
     this->mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
+    this->mVendorDisplayService->setMode(16, 0);
+    this->mVendorDisplayService->setMode(17, 0);
+    this->mVendorDisplayService->setMode(18, 0);
+    this->mVendorDisplayService->setMode(20, 0);
+    this->mVendorDisplayService->setMode(21, 0);
+    this->mVendorDisplayService->setMode(16, 1);
+    this->mVendorDisplayService->setMode(19, 1);
 #if FOD_HBM
     set(HBM_ENABLE_PATH, 0);
 #endif
