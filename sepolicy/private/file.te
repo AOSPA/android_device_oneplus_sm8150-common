@@ -20,3 +20,6 @@ type diag_device, dev_type, mlstrustedobject;
 
 # system
 type system_configs_file, system_file_type, file_type;
+
+type sysfs_tri_state_key, sysfs_type, fs_type;
+type persist_engineer_file, file_type;
