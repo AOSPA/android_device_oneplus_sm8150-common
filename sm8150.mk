@@ -76,7 +76,8 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
-    init.qcom.rc
+    init.qcom.rc \
+    init.qcom.post_boot.sh
 
 # Display
 PRODUCT_PACKAGES += \
@@ -139,8 +140,7 @@ PRODUCT_PACKAGES += \
 # QCOM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
-    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
-    $(LOCAL_PATH)/rootdir/etc/init.qcom.post_boot.sh:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin/init.qcom.post_boot.sh
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 # QTI common
 -include vendor/qcom/common/av/qti-av.mk
