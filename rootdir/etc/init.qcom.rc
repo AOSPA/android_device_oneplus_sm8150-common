@@ -15,3 +15,8 @@ service dashd /sbin/dashd
     critical
     seclabel u:r:dashd:s0
     group root system
+
+# Disable OnePlus brain service
+service oneplus_brain_service /system/bin/true
+    oneshot
+    disabled
