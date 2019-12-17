@@ -107,8 +107,8 @@ TARGET_ENABLE_MEDIADRM_64 := true
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Fingerprint
-SOONG_CONFIG_NAMESPACES += oneplusMsmnileFodPlugin
-SOONG_CONFIG_oneplusMsmnileFodPlugin := posX posY size
+SOONG_CONFIG_NAMESPACES += ONEPLUS_MSMNILE_FOD
+SOONG_CONFIG_ONEPLUS_MSMNILE_FOD := HBM POS_X POS_Y SIZE
 
 # Gestures
 TARGET_GESTURES_NODE := "/proc/touchpanel/gesture_enable"

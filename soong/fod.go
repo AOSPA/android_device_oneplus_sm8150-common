@@ -3,18 +3,24 @@ package fod
 import (
     "android/soong/android"
     "android/soong/cc"
+    "strconv"
     "strings"
 )
 
 func deviceFlags(ctx android.BaseContext) []string {
     var cflags []string
 
-    var config = ctx.AConfig().VendorConfig("oneplusMsmnileFodPlugin")
-    var posX = strings.TrimSpace(config.String("posX"))
-    var posY = strings.TrimSpace(config.String("posY"))
-    var size = strings.TrimSpace(config.String("size"))
+    var config = ctx.AConfig().VendorConfig("ONEPLUS_MSMNILE_FOD")
+    var hbm = strconv.FormatBool(config.Bool("HBM"))
+    var posX = strings.TrimSpace(config.String("POS_X"))
+    var posY = strings.TrimSpace(config.String("POS_Y"))
+    var size = strings.TrimSpace(config.String("SIZE"))
 
-    cflags = append(cflags, "-DFOD_POS_X=" + posX, "-DFOD_POS_Y=" + posY, "-DFOD_SIZE=" + size)
+    cflags = append(cflags,
+            "-DFOD_HBM=" + hbm,
+            "-DFOD_POS_X=" + posX,
+            "-DFOD_POS_Y=" + posY,
+            "-DFOD_SIZE=" + size)
     return cflags
 }
 
