@@ -44,6 +44,12 @@ AB_OTA_PARTITIONS += \
     system \
     vbmeta
 
+ifeq ($(TARGET_ONEPLUS_T_DEVICE),true)
+AB_OTA_PARTITIONS += \
+    product \
+    vbmeta_system
+endif
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -92,8 +98,13 @@ PRODUCT_PACKAGES += \
     vendor.pa.biometrics.fingerprint.inscreen@1.0-service.oneplus_msmnile
 
 # Fstab
+ifneq ($(TARGET_ONEPLUS_T_DEVICE),true)
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/etc/fstab.qcom:system/etc/fstab.qcom
+else
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstabT.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+endif
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -127,6 +138,12 @@ PRODUCT_PACKAGES += \
 
 # ParanoidDoze
 PRODUCT_PACKAGES += ParanoidDoze
+
+#Partitions
+ifeq ($(TARGET_ONEPLUS_T_DEVICE),true)
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+endif
 
 # Performance
 PRODUCT_COPY_FILES += \
