@@ -1,6 +1,11 @@
 # Audio
 /system/etc/audio_policy_configuration.xml    u:object_r:system_configs_file:s0
 
+# Camera
+camera.OPpictureId    u:object_r:vendor_camera_prop:s0
+ro.camera.            u:object_r:vendor_camera_prop:s0
+vendor.camera.        u:object_r:vendor_camera_prop:s0
+
 # Files in rootfs
 /bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
 /dsp(/.*)?               u:object_r:adsprpcd_file:s0
