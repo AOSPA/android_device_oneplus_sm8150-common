@@ -4,11 +4,6 @@ on post-fs-data
     write /data/misc/camera/client_package_name "com.oneplus.camera"
     chmod 0444 /data/misc/camera/client_package_name
 
-on init
-    mount none /system/lib/modules/wlan.ko /vendor/lib/modules-aging/qca_cld3_wlan.ko bind
-    mount none /system/lib/modules/wlan.ko /vendor/lib/modules/qca_cld3_wlan.ko bind
-    rm /data/logcat.txt
-
 service dashd /sbin/dashd
     class core
     critical
