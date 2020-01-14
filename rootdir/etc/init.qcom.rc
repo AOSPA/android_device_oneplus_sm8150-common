@@ -7,7 +7,6 @@ on post-fs-data
 on init
     mount none /system/lib/modules/wlan.ko /vendor/lib/modules-aging/qca_cld3_wlan.ko bind
     mount none /system/lib/modules/wlan.ko /vendor/lib/modules/qca_cld3_wlan.ko bind
-    mount none /system/etc/fstab.qcom /vendor/etc/fstab.qcom bind
     rm /data/logcat.txt
 
 service dashd /sbin/dashd
