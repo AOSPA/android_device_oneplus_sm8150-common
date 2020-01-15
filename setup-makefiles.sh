@@ -35,7 +35,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ROOT}" true
 
 # Copyright headers and guards
-write_headers "oneplus7 oneplus7pro"
+write_headers "oneplus7 oneplus7t oneplus7pro oneplus7tpro"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
