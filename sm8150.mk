@@ -165,9 +165,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
 
 # QTI common
--include vendor/qcom/common/av/qti-av.mk
--include vendor/qcom/common/bt/qti-bt.mk
--include vendor/qcom/common/perf/qti-perf.mk
+-include vendor/qcom/common/*/qti-*.mk
 
 # tri-state-key
 PRODUCT_PACKAGES += \
