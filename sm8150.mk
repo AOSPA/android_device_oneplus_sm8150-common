@@ -26,6 +26,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-pa
 
 PRODUCT_PACKAGES += \
+    EmptyOverlay \
     SM8150CommonFrameworkRes
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
