@@ -35,7 +35,7 @@
 
 // This is not a typo by me. It's by OnePlus.
 #define HBM_ENABLE_PATH "/sys/class/drm/card0-DSI-1/op_friginer_print_hbm"
-#define DIM_AMOUNT_PATH "/sys/class/drm/card0-DSI-1/dim_alpha"
+#define DIM_AMOUNT_PATH "/sys/class/drm/card0-DSI-1/fod_dim_alpha"
 
 namespace vendor {
 namespace pa {
