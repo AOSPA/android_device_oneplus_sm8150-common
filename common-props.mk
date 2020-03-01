@@ -91,7 +91,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true \
     mmp.enable.3g2=true \
     persist.mm.enable.prefetch=true \
-    vendor.mm.enable.qcom_parser=67092479 \
+    vendor.mm.enable.qcom_parser=66961407 \
     vendor.vidc.debug.level=1 \
     vendor.swvdec.log.level=1
 
