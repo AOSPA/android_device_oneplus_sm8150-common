@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c13eaf0f_bde0e309",
+        "filename": "sm8150.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-03-01T21:29:44Z",
+      "side": 1,
+      "message": "If you care, I cleaned up the vendor overlay macro on the op6 repo.",
+      "revId": "07a538972ff5fe8b5206bddc60a3b695a32a2be0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
