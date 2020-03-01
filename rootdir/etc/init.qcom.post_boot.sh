@@ -1,5 +1,8 @@
 #! /vendor/bin/sh
 
+# Enable SIGKILL memory reap
+echo 1 > /proc/sys/vm/reap_mem_on_sigkill
+
 # Setup readahead
 find /sys/devices -name read_ahead_kb | while read node; do echo 128 > $node; done
 
