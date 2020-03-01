@@ -19,9 +19,7 @@ property Name is called. -->
 
                 <!--Vendor Properties -->
                 <Prop Name="vendor.iop.enable_iop" Value="1" />
-                <!--Begin, Closed by weiwang@system, 2019/7/4 -->
                 <Prop Name="vendor.iop.enable_uxe" Value="0" />
-                <!--End -->
                 <Prop Name="vendor.debug.enable.lm" Value="true" />
                 <Prop Name="vendor.perf.iop_v3.enable" Value="true" />
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
@@ -29,10 +27,14 @@ property Name is called. -->
                 <Prop Name="vendor.iop.enable_prefetch_ofr" Value="false" />
 
                 <!--System Properties -->
+                <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="true" />
+                <Prop Name="ro.lmk.enhance_batch_kill" Value="false" />
+                <Prop Name="ro.lmk.enable_watermark_check" Value="true" />
+                <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="48" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
-                <Prop Name="ro.lmk.enable_userspace_lmk" Value="false" />
+                <Prop Name="ro.lmk.enable_userspace_lmk" Value="true" />
 
     </PerfConfigs>
 </PerfConfigsStore>
