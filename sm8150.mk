@@ -28,8 +28,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     SM8150CommonFrameworkRes
 
-# Properties
--include $(LOCAL_PATH)/common-props.mk
+
+
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
