@@ -16,6 +16,24 @@
       "revId": "e72a7935b649f2fffd1ec9934d377cce5846e2be",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "85ab1439_7c5a2bc3",
+        "filename": "system.prop",
+        "patchSetId": 2
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-03-12T16:04:25Z",
+      "side": 1,
+      "message": "whoops, fixed it",
+      "parentUuid": "496fc099_e6d6ddde",
+      "revId": "e72a7935b649f2fffd1ec9934d377cce5846e2be",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
     }
   ]
 }
