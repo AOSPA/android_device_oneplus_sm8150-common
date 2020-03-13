@@ -23,4 +23,6 @@
     <!-- Color of the FOD view -->
     <color name="config_fodColor">#ccccac</color>
 
+    <!-- Burn-in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
 </resources>
