@@ -167,6 +167,9 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.oneplus_msmnile \
     android.hardware.sensors@1.0-service.oneplus_msmnile \
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sensors/android.hardware.sensors@1.0-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/android.hardware.sensors@1.0-service.rc
+
 # QTI common
 -include vendor/qcom/common/*/qti-*.mk
 
