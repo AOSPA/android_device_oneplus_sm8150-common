@@ -580,7 +580,7 @@ void light_sensor_correction(sensors_event_t *ev) {
     uint8_t r = buffer[0];
     uint8_t g = buffer[1];
     uint8_t b = buffer[2];
-    ALOGV("Screen Color Above Sensor: %d, %d, %d", r, g, b);
+    ALOGE("Screen Color Above Sensor: %d, %d, %d at X, Y: %d, %d", r, g, b, ALS_POS_X, ALS_POS_Y);
     ALOGV("Original reading: %f", ev->light);
     int screen_brightness = get("/sys/class/backlight/panel0-backlight/brightness", 0);
     float correction = 0.0f;
