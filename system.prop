@@ -279,9 +279,6 @@ debug.sf.enable_gl_backpressure=1
 ro.surface_flinger.vsync_event_phase_offset_ns=2000000
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
-# Sensors
-persist.vendor.naruto.light.support=false
-
 # OnePlus sensors
 ro.sensor.pickup=oneplus.sensor.pickup
 ro.sensor.pocket=oneplus.sensor.pocket
