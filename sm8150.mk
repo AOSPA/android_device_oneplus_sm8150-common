@@ -163,7 +163,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
 
 # QTI common
--include vendor/qcom/common/*/qti-*.mk
+TARGET_COMMON_QTI_COMPONENTS := \
+    av \
+    bt \
+    perf \
+    telephony \
+    wfd
 
 # tri-state-key
 PRODUCT_PACKAGES += \
