@@ -1,6 +1,3 @@
-# Audio
-/system/etc/audio_policy_configuration.xml    u:object_r:system_configs_file:s0
-
 # Devices
 /dev/audio_ultrasound     u:object_r:ultrasound_device:s0
 /dev/elliptic0            u:object_r:sensors_device:s0
@@ -14,9 +11,6 @@
 /op1(/.*)?               u:object_r:op1_file:s0
 /op2(/.*)?               u:object_r:op2_file:s0
 /persist(/.*)?           u:object_r:persist_file:s0
-
-# Modules
-/system/lib/modules/wlan\.ko    u:object_r:system_file:s0
 
 # Lights
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.light@2\.0-service    u:object_r:hal_light_default_exec:s0
