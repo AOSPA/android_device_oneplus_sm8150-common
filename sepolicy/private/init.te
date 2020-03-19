@@ -10,8 +10,5 @@ allow op1_file self:filesystem associate;
 # Allow init to mount vendor configs
 allow init vendor_configs_file:dir mounton;
 
-# Allow init to mount wlan kernel module
-allow init { system_file vendor_file }:file mounton;
-
 allow init sysfs_oem:file w_file_perms;
 allow init sysfs_fod:file setattr;
