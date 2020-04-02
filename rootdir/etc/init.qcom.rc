@@ -4,10 +4,9 @@ on post-fs-data
     write /data/misc/camera/client_package_name "com.oneplus.camera"
     chmod 0444 /data/misc/camera/client_package_name
 
-service dashd /sbin/dashd
+service dashd /system/bin/dashd
     class core
     critical
-    seclabel u:r:dashd:s0
     group root system
 
 # Disable OnePlus brain service
