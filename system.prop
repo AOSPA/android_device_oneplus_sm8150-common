@@ -285,3 +285,7 @@ ro.sensor.pocket=oneplus.sensor.op_motion_detect
 
 # PASR
 vendor.power.pasr.enabled=true
+
+# Disable mask layer(FOD)
+vendor.display.disable_mask_layer_hint=1
+
