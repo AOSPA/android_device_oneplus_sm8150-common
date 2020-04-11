@@ -45,8 +45,8 @@
     <integer name="config_drawMKeyCode">247</integer>
     <integer name="config_drawWKeyCode">246</integer>
     <integer name="config_drawSKeyCode">248</integer>
-    <integer name="config_drawArrowLeftKeyCode">253</integer>
-    <integer name="config_drawArrowRightKeyCode">254</integer>
+    <integer name="config_drawArrowLeftKeyCode">254</integer>
+    <integer name="config_drawArrowRightKeyCode">253</integer>
     <integer name="config_twoFingerSwipeKeyCode">251</integer>
 
     <!-- Default settings for gestures
