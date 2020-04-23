@@ -14,7 +14,6 @@ type adsprpcd_file, file_type;
 type bt_firmware_file, file_type;
 type firmware_file, file_type;
 type persist_file, file_type;
-type qti_init_shell_exec, exec_type, vendor_file_type, file_type;
 type oem_audio_device, file_type;
 type sysfs_graphics, sysfs_type, fs_type;
 type diag_device, dev_type, mlstrustedobject;
