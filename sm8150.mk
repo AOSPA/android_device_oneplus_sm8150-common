@@ -75,11 +75,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/media_codecs_dolby_audio.xml
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    libbluetooth_qti \
-    libbt-logClient.so
-
 # Boot control
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
