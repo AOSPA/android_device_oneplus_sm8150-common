@@ -155,6 +155,10 @@ BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 
 TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_PRODUCT := product
+
+# Don't build super.img.
+PRODUCT_BUILD_SUPER_PARTITION := false
+BUILDING_VENDOR_IMAGE := false
 endif
 
 # Power
