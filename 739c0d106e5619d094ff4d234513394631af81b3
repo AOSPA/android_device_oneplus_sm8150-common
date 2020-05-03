@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f992ec87_af9b9893",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1000055
+      },
+      "writtenOn": "2020-05-03T16:55:05Z",
+      "side": 1,
+      "message": "Do we need this now that we don´t build it?",
+      "revId": "739c0d106e5619d094ff4d234513394631af81b3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4abbc4be_0e52a9a6",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1000055
+      },
+      "writtenOn": "2020-05-03T16:55:05Z",
+      "side": 1,
+      "message": "Same here",
+      "revId": "739c0d106e5619d094ff4d234513394631af81b3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
