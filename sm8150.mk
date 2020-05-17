@@ -183,6 +183,10 @@ PRODUCT_PACKAGES += \
     TriStateHandler \
     tri-state-key_daemon
 
+# Display Mode
+    PRODUCT_PACKAGES += \
+    DisplayMode
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
