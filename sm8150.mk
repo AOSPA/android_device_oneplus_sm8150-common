@@ -20,13 +20,17 @@ $(call inherit-product-if-exists, vendor/oneplus/sm8150-common/sm8150-common-ven
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pa
-
+# Common RRO Overlays
 PRODUCT_PACKAGES += \
-    SM8150CommonFrameworkRes
+    SM8150CommonCarrierConfig \
+    SM8150CommonFrameworksRes \
+    SM8150CommonSystemUI
+
+# Common PA RRO Overlays
+PRODUCT_PACKAGES += \
+    SM8150CommonFrameworksPARes \
+    SM8150CommonSettingsPA \
+    SM8150CommonSystemUIPA
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
