@@ -83,6 +83,9 @@ TARGET_USE_QTI_BT_STACK := true
 # Charger Mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
+# FOD
+TARGET_SURFACEFLINGER_FOD_LIB := //$(COMMON_PATH):libfod_extension.oneplus_msmnile
+
 # Dex
 ifeq ($(HOST_OS),linux)
     ifneq ($(TARGET_BUILD_VARIANT),eng)
