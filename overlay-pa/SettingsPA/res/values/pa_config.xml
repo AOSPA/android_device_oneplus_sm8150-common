@@ -31,4 +31,10 @@
     -->
     <integer name="config_fingerprintSensorLocation">4</integer>
 
+    <integer-array name="config_availableRefreshRates">
+        <item>0</item> <!-- Adaptive (90/60hz) -->
+        <item>1</item> <!-- Normal (60hz) -->
+        <item>2</item> <!-- High (90hz) -->
+    </integer-array>
+
 </resources>
