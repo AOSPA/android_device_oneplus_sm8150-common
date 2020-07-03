@@ -23,4 +23,6 @@
     <!-- Color of the FOD view -->
     <color name="config_fodColor">#ccccac</color>
 
+    <!-- Whether to dim the FOD icon -->
+    <bool name="config_fodIconDim">true</bool>
 </resources>
