@@ -288,3 +288,6 @@ vendor.power.pasr.enabled=true
 
 # Disable mask layer(FOD)
 vendor.display.disable_mask_layer_hint=1
+
+# Disable AAC Whitelist for AAC HD
+persist.vendor.bt.a2dp.aac_whitelist=false
