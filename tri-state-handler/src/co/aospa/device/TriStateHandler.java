@@ -22,10 +22,28 @@ import android.media.AudioManager;
 import android.os.Vibrator;
 import android.os.VibrationEffect;
 import android.view.KeyEvent;
+import android.util.Log;
+import android.text.TextUtils;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.android.internal.os.DeviceKeyHandler;
 
 public class TriStateHandler implements DeviceKeyHandler {
+
+    private static final String TAG = "KeyHandler";
+    private static final boolean DEBUG = true;
+
+    private static final boolean sIsOnePlus7 = android.os.Build.PRODUCT.equals("OnePlus7");
+    private static final boolean sIsOnePlus7t = android.os.Build.PRODUCT.equals("OnePlus7T");
 
     // Slider key codes
     private static final int MODE_NORMAL = 601;
@@ -36,11 +54,19 @@ public class TriStateHandler implements DeviceKeyHandler {
     private static Context mContext;
     private static Vibrator mVibrator;
 
+    private static final String TRI_STATE_CALIB_DATA = "/mnt/vendor/persist/engineermode/tri_state_hall_data";
+    private static final String TRI_STATE_CALIB_PATH = "/sys/bus/platform/devices/soc:tri_state_key/hall_data_calib";
+
     public TriStateHandler(Context context) {
         mContext = context;
 
         mAudioManager = mContext.getSystemService(AudioManager.class);
         mVibrator = mContext.getSystemService(Vibrator.class);
+
+       if (sIsOnePlus7 || sIsOnePlus7t) {
+            initTriStateHallSensor();
+        }
+
     }
 
     public KeyEvent handleKeyEvent(KeyEvent event) {
@@ -86,4 +112,74 @@ public class TriStateHandler implements DeviceKeyHandler {
             }
         }
     }
+
+    private void initTriStateHallSensor() {
+        String calibData = getFileValue(TRI_STATE_CALIB_DATA, "0,0;0,0;0,0");
+        if (DEBUG) Log.i(TAG, "calibData = " + calibData);
+        String[] pairs = calibData.split(";");
+        List<String> valueList = new ArrayList<>();
+        for (String pair : pairs) {
+            String[] valuePair = pair.split(",");
+            String lowValue = valuePair[0];
+            valueList.add(lowValue);
+            String hightValue = valuePair[1];
+            valueList.add(hightValue);
+        }
+        String calibDataString = TextUtils.join(",", valueList);
+        if (DEBUG) Log.i(TAG, "calibDataString = " + calibDataString);
+        writeValue(TRI_STATE_CALIB_PATH, calibDataString);
+    }
+
+    /**
+     * Write a string value to the specified file.
+     * @param filename      The filename
+     * @param value         The value
+     */
+    public static void writeValue(String filename, String value) {
+        if (filename == null) {
+            return;
+        }
+        try {
+            FileOutputStream fos = new FileOutputStream(new File(filename));
+            fos.write(value.getBytes());
+            fos.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static String getFileValue(String filename, String defValue) {
+        String fileValue = readLine(filename);
+        if(fileValue!=null){
+            return fileValue;
+        }
+        return defValue;
+    }
+
+    public static String readLine(String filename) {
+        if (filename == null) {
+            return null;
+        }
+        BufferedReader br = null;
+        String line = null;
+        try {
+            br = new BufferedReader(new FileReader(filename), 1024);
+            line = br.readLine();
+        } catch (IOException e) {
+            return null;
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    // ignore
+                }
+            }
+        }
+        return line;
+    }
+
 }
