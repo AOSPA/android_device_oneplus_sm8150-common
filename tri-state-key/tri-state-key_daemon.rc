@@ -4,6 +4,9 @@ on fs
 
     start tri-state-key_daemon
 
+on post-fs
+    write /sys/bus/platform/devices/soc/soc\:tri_state_key/hall_data_calib "40,112,69,67,117,34"
+
 service tri-state-key_daemon /system/bin/tri-state-key_daemon
     class late_start
     user system
