@@ -107,6 +107,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstabDyn.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 endif
 
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder
 
 # Input
 PRODUCT_COPY_FILES += \
