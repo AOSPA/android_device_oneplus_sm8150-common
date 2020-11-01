@@ -192,12 +192,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.msmnile \
-    libcutils \
-    librecovery_updater_msm \
-    libz \
-
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
