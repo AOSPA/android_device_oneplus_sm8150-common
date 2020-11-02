@@ -16,7 +16,11 @@
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.sensors@1\.0-service  u:object_r:hal_sensors_vendor_exec:s0
 
 # HALs
+<<<<<<< HEAD
 /system/bin/hw/vendor\.pa\.biometrics\.fingerprint\.inscreen@1.0-service\.oneplus_msmnile       u:object_r:hal_fod_msmnile_exec:s0
+=======
+# /system/bin/hw/pa\.biometrics\.fingerprint\.inscreen@1.0-service\.oneplus_oneplus6    u:object_r:hal_fod_sdm845_exec:s0
+>>>>>>> 97ceb56... [DNM] oneplus6: Disable FOD
 
 # DASH
 /system/bin/dashd    u:object_r:dashd_exec:s0

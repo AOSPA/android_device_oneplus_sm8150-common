@@ -97,8 +97,8 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    vendor.pa.biometrics.fingerprint.inscreen@1.0-service.oneplus_msmnile
+# PRODUCT_PACKAGES += \
+#    vendor.pa.biometrics.fingerprint.inscreen@1.0-service.oneplus_msmnile
 
 # Fstab
 ifneq ($(TARGET_USES_ONEPLUS_DYNAMIC_PARTITIONS),true)
