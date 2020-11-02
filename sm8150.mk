@@ -175,6 +175,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     perf \
     telephony \
+    overlay \
     wfd
 
 # tri-state-key
