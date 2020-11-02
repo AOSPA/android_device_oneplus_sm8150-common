@@ -97,8 +97,8 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    vendor.pa.biometrics.fingerprint.inscreen@1.0-service.oneplus_msmnile
+# PRODUCT_PACKAGES += \
+#    vendor.pa.biometrics.fingerprint.inscreen@1.0-service.oneplus_msmnile
 
 # Fstab
 ifneq ($(TARGET_USES_ONEPLUS_DYNAMIC_PARTITIONS),true)
@@ -154,8 +154,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perfconfigstore.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/perf/perfconfigstore.xml
 
 # Permissions
-PRODUCT_COPY_FILES += \
-    vendor/pa/config/permissions/vendor.pa.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.pa.biometrics.fingerprint.inscreen.xml
+#PRODUCT_COPY_FILES += \
+#    vendor/pa/config/permissions/vendor.pa.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.pa.biometrics.fingerprint.inscreen.xml
 
 # Power
 PRODUCT_PACKAGES += \
