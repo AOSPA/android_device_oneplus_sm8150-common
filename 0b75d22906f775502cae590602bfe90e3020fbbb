@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d36e30f0_4c666d26",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2020-12-19T07:50:34Z",
+      "side": 1,
+      "message": "i guess you can take blobs from nubia NX627 or bsp",
+      "revId": "0b75d22906f775502cae590602bfe90e3020fbbb",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
