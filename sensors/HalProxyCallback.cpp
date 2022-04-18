@@ -78,6 +78,10 @@ std::vector<V2_1::Event> HalProxyCallbackBase::processEvents(const std::vector<V
         if ((sensor.flags & V1_0::SensorFlagBits::WAKE_UP) != 0) {
             (*numWakeupEvents)++;
         }
+        if (event.sensorType == V2_1::SensorType::DYNAMIC_SENSOR_META) {
+            event.u.dynamic.sensorHandle =
+                    setSubHalIndex(event.u.dynamic.sensorHandle, mSubHalIndex);
+        }
         eventsOut.push_back(event);
     }
     return eventsOut;
