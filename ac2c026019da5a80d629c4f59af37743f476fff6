@@ -69,6 +69,24 @@
       "parentUuid": "731c6b1b_4a25300c",
       "revId": "ac2c026019da5a80d629c4f59af37743f476fff6",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bf0487ac_71c492ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2022-08-30T09:44:46Z",
+      "side": 1,
+      "message": "\u003e \u003e Bluetooth is perfectly fine for me on alioth with no changes to properties so don\u0027t know\n\u003e \n\u003e we have those props in qti bt\n\nwhere?",
+      "parentUuid": "eb11ccb1_ce9520c0",
+      "revId": "ac2c026019da5a80d629c4f59af37743f476fff6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
