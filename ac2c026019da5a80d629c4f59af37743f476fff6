@@ -105,6 +105,24 @@
       "parentUuid": "bf0487ac_71c492ff",
       "revId": "ac2c026019da5a80d629c4f59af37743f476fff6",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27b59e45_de28c420",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2022-08-30T10:07:38Z",
+      "side": 1,
+      "message": "\u003e \u003e \u003e \u003e Bluetooth is perfectly fine for me on alioth with no changes to properties so don\u0027t know\n\u003e \u003e \u003e \n\u003e \u003e \u003e we have those props in qti bt\n\u003e \u003e \n\u003e \u003e where?\n\u003e \n\u003e https://github.com/AOSPA/android_vendor_qcom-opensource_bluetooth-commonsys-intf/blob/topaz/bt-system-opensource-product.mk#L18\n\ni dont see \"bluetooth.device.class_of_device\" set here, but whether it\u0027s needed anyway is questionable\n\nchecking aosp codesearch probably not so ill abandon this",
+      "parentUuid": "ad714404_3c6a38e6",
+      "revId": "ac2c026019da5a80d629c4f59af37743f476fff6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
