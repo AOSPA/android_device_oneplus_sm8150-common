@@ -331,6 +331,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     device/oneplus/common
 
+# Subsystem silent restart
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.ssr.restart_level=ALL_ENABLE
+
 # tri-state key
 PRODUCT_PACKAGES += \
     tri-state-key_daemon \
