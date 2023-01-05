@@ -270,9 +270,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml \
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+
 PRODUCT_PACKAGES += \
     als_correction_service.oneplus_msmnile \
     android.hardware.sensors@2.0-service.oneplus_msmnile \
+    sensors.oneplus \
     libsensorndkbridge
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
