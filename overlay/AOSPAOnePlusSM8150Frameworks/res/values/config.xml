@@ -31,11 +31,6 @@
     <!-- Whether device has physical tri state switch -->
     <bool name="config_hasAlertSlider">true</bool>
 
-    <!-- The location of the devices physical tri state switch
-         0: Left side
-         1: Right side -->
-    <integer name="config_alertSliderLocation">1</integer>
-
     <!-- Gestures' key codes. If the gesture is not supported set it to 0. -->
     <integer name="config_doubleTapKeyCode">143</integer>
     <integer name="config_singleTapKeyCode">255</integer>
