@@ -80,9 +80,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-qti:64 \
-    android.hardware.boot@1.1-impl-qti.recovery \
-    android.hardware.boot@1.1-service
+    android.hardware.boot@1.2-impl-qti:64 \
+    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-service
 
 # Camera
 PRODUCT_PACKAGES += \
