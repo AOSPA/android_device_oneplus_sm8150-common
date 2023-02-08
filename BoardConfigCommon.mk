@@ -58,8 +58,6 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(VENDOR_PATH)/configs/vintf/oneplus_vendor_framework_compatibility_matrix.xml
 
-DEVICE_MATRIX_FILE += device/qcom/common/compatibility_matrix.xml
-
 DEVICE_MANIFEST_FILE += $(VENDOR_PATH)/configs/vintf/manifest.xml
 ODM_MANIFEST_FILES += $(VENDOR_PATH)/configs/vintf/manifest-qva.xml
 
