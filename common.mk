@@ -20,6 +20,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=erofs \
     POSTINSTALL_OPTIONAL_system=true
 
+PRODUCT_PACKAGES += \
+    checkpoint_gc \
+    otapreopt_script
+
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
     af.fast_track_multiplier=2 \
