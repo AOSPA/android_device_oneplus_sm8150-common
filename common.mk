@@ -96,9 +96,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.camera.res.fmq.size=1048576
 
+PRODUCT_PACKAGES += \
+    Aperture
+
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.vendor.camera.privapp.list=com.oneplus.camera \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera
+    persist.vendor.camera.privapp.list=com.oneplus.camera,org.lineageos.aperture \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera,org.lineageos.aperture
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
