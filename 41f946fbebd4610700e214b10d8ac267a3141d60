@@ -18,6 +18,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a4b813c_b1bac128",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-04-29T13:58:27Z",
+      "side": 0,
+      "message": "OP7 doesn\u0027t support wireless charging",
+      "parentUuid": "c81201f8_c2831678",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9c7661af_87e1c623",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-04-29T13:46:38Z",
       "side": 0,
       "message": "do none of these exist?",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "762a52c1_7fd7bfe6",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-04-29T13:58:27Z",
+      "side": 0,
+      "message": "same",
+      "parentUuid": "9c7661af_87e1c623",
       "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -52,6 +88,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "61ebeb0d_072564ce",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-04-29T13:58:27Z",
+      "side": 0,
+      "message": "doesn\u0027t exist",
+      "parentUuid": "6a306c31_de350a94",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "012d5202_ea06e970",
@@ -65,6 +119,24 @@
       "writtenOn": "2023-04-29T13:46:38Z",
       "side": 0,
       "message": "why",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed7d07c9_7f9a6564",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-04-29T13:58:27Z",
+      "side": 0,
+      "message": "same",
+      "parentUuid": "012d5202_ea06e970",
       "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -86,6 +158,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a3e0580_be4150d1",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-04-29T13:58:27Z",
+      "side": 0,
+      "message": "doesn\u0027t exist",
+      "parentUuid": "2188584b_8afee03b",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "03bc791a_a2aaaa40",
@@ -99,6 +189,24 @@
       "writtenOn": "2023-04-29T13:46:38Z",
       "side": 0,
       "message": "why",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1f83887_9fd0ae7c",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-04-29T13:58:27Z",
+      "side": 0,
+      "message": "same",
+      "parentUuid": "03bc791a_a2aaaa40",
       "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -122,6 +230,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "36877333_33df567e",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 673,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-04-29T13:58:27Z",
+      "side": 0,
+      "message": "doesn\u0027t exist although we can probably copy / do something like an OTG toggle if someone cares i suppose?",
+      "parentUuid": "c1a74617_e362490f",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f725e71b_481e1e64",
         "filename": "init/etc/init.oem.rc",
         "patchSetId": 3
@@ -133,6 +259,24 @@
       "writtenOn": "2023-04-29T13:46:38Z",
       "side": 0,
       "message": "is 0 default?",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18b9444d_be2a4e92",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 683,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-04-29T13:58:27Z",
+      "side": 0,
+      "message": "doesn\u0027t exist",
+      "parentUuid": "f725e71b_481e1e64",
       "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -150,6 +294,24 @@
       "writtenOn": "2023-04-29T13:46:38Z",
       "side": 0,
       "message": "you probably wanna keep this section",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2c00d31_6c05b659",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 804,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-04-29T13:58:27Z",
+      "side": 0,
+      "message": "doesn\u0027t exist",
+      "parentUuid": "cc9d77cc_508eea10",
       "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
