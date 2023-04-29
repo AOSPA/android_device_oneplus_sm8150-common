@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c81201f8_c2831678",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-29T13:46:38Z",
+      "side": 0,
+      "message": "does this not do anything?",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9c7661af_87e1c623",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-29T13:46:38Z",
+      "side": 0,
+      "message": "do none of these exist?",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a306c31_de350a94",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-29T13:46:38Z",
+      "side": 0,
+      "message": "why",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "012d5202_ea06e970",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-29T13:46:38Z",
+      "side": 0,
+      "message": "why",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2188584b_8afee03b",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-29T13:46:38Z",
+      "side": 0,
+      "message": "why",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03bc791a_a2aaaa40",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-29T13:46:38Z",
+      "side": 0,
+      "message": "why",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1a74617_e362490f",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 673,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-29T13:46:38Z",
+      "side": 0,
+      "message": "do we want this",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f725e71b_481e1e64",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 683,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-29T13:46:38Z",
+      "side": 0,
+      "message": "is 0 default?",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc9d77cc_508eea10",
+        "filename": "init/etc/init.oem.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 804,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-29T13:46:38Z",
+      "side": 0,
+      "message": "you probably wanna keep this section",
+      "revId": "41f946fbebd4610700e214b10d8ac267a3141d60",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
