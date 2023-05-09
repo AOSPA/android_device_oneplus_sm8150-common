@@ -118,9 +118,9 @@ PRODUCT_PACKAGES += \
     vendor.oneplus.hardware.display@1.0.vendor
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.set_idle_timer_ms=1500 \
-    ro.surface_flinger.set_touch_timer_ms=1500 \
-    ro.surface_flinger.set_display_power_timer_ms=1500 \
+    ro.surface_flinger.set_idle_timer_ms=2500 \
+    ro.surface_flinger.set_touch_timer_ms=2500 \
+    ro.surface_flinger.set_display_power_timer_ms=500 \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 PRODUCT_VENDOR_PROPERTIES += \
