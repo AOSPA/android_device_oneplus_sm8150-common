@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38e6440c_73cb09ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-05-09T12:13:47Z",
+      "side": 1,
+      "message": "Making it slightly less aggressive as 1.5s seems a bit too much on a panel that has significant color shifting. 2.5s should be fine.",
+      "revId": "a551aec419ec429a9b7ca455209e04b7ad5c9b15",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
