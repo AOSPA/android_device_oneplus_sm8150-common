@@ -244,6 +244,7 @@ PRODUCT_PACKAGES += \
     AOSPAOnePlusSM8150Frameworks \
     AOSPAOnePlusSM8150SystemUI \
     OnePlusSM8150Frameworks \
+    OnePlusSM8150Nfc \
     OnePlusSM8150Settings \
     OnePlusSM8150SystemUI
 
