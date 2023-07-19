@@ -1,0 +1,41 @@
+on property:persist.sys.sf.native_mode=0
+    write /sys/class/drm/card0-DSI-1/native_display_customer_p3_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_customer_srgb_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_p3_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_wide_color_mode 0
+
+on property:persist.sys.sf.native_mode=256
+    write /sys/class/drm/card0-DSI-1/native_display_customer_p3_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_customer_srgb_mode 1
+    write /sys/class/drm/card0-DSI-1/native_display_p3_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_wide_color_mode 0
+
+on property:persist.sys.sf.native_mode=257
+    write /sys/class/drm/card0-DSI-1/native_display_customer_p3_mode 1
+    write /sys/class/drm/card0-DSI-1/native_display_customer_srgb_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_p3_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_wide_color_mode 0
+
+on property:persist.sys.sf.native_mode=258
+    write /sys/class/drm/card0-DSI-1/native_display_customer_p3_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_customer_srgb_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_p3_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode 1
+    write /sys/class/drm/card0-DSI-1/native_display_wide_color_mode 0
+
+on property:persist.sys.sf.native_mode=259
+    write /sys/class/drm/card0-DSI-1/native_display_customer_p3_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_customer_srgb_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_p3_mode 1
+    write /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_wide_color_mode 0
+
+on property:persist.sys.sf.native_mode=260
+    write /sys/class/drm/card0-DSI-1/native_display_customer_p3_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_customer_srgb_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_p3_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode 0
+    write /sys/class/drm/card0-DSI-1/native_display_wide_color_mode 1
