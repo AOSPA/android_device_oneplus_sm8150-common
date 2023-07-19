@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7a13a75_ccfc0d8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-07-19T12:56:08Z",
+      "side": 1,
+      "message": "using extended colour intents to avoid tripping anything in qdcm.\n\nfeel free to give any inputs",
+      "revId": "5eb0178a3296b9eccee967a409d4628028862db5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
