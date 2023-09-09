@@ -557,6 +557,11 @@ vendor/bin/mdm_helper_proxy
 vendor/lib64/libmdmimgload.so
 vendor/lib64/liboemnvbk_img_helper.so
 
+# Media profiles
+odm/etc/media_profiles_V1_0.xml
+vendor/etc/media_profiles_vendor.xml
+vendor/etc/media_profiles.xml
+
 # MM OSAL - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/lib/libmmosal.so|6f71fd1d54d6ca8df7d362a72517b082ed412bbe
 vendor/lib64/libmmosal.so|568c9dff1fe27cc4cd874181bf0d8ab5dc6d372b
