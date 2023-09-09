@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d88e6475_cea296f1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-09-09T06:58:05Z",
+      "side": 1,
+      "message": "TODO: actually load codecs xml",
+      "revId": "53fe5c7b34c946602d5af42f7366630bcfda4d94",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
