@@ -17,8 +17,14 @@
 */
 package co.aospa.settings.DisplayMode;
 
+import android.content.BroadcastReceiver;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.database.ContentObserver;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.UserHandle;
 import android.provider.Settings;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,6 +50,25 @@ public class DeviceSettings extends PreferenceFragment
     public static final String KEY_VIVID_SWITCH = "vivid";
 
     private TwoStatePreference mHBMModeSwitch;
+    private boolean mInternalHbmStart = false;
+
+    private final BroadcastReceiver mServiceStateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            switch (intent.getAction()) {
+                case HBMModeSwitch.ACTION_HBM_SERVICE_CHANGED:
+                    if (mInternalHbmStart) {
+                        mInternalHbmStart = false;
+                        return;
+                    }
+                    if (mHBMModeSwitch == null) return;
+                    final boolean hbmStarted = intent.getBooleanExtra(
+                            HBMModeSwitch.EXTRA_HBM_STATE, false);
+                    mHBMModeSwitch.setChecked(hbmStarted);
+                    break;
+        }
+    };
+
 
 
     @Override
@@ -55,6 +80,10 @@ public class DeviceSettings extends PreferenceFragment
         mHBMModeSwitch.setEnabled(HBMModeSwitch.isSupported());
         mHBMModeSwitch.setChecked(HBMModeSwitch.isCurrentlyEnabled());
         mHBMModeSwitch.setOnPreferenceChangeListener(this);
+
+        // Registering observers
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(HBMModeSwitch.ACTION_HBM_SERVICE_CHANGED);
     }
 
     @Override
@@ -66,15 +95,9 @@ public class DeviceSettings extends PreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mHBMModeSwitch) {
+            mInternalHbmStart = true;
             Boolean enabled = (Boolean) newValue;
-            Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "5" : "0");
-            Intent hbmIntent = new Intent(this.getContext(),
-                    co.aospa.settings.DisplayMode.HBMModeService.class);
-            if (enabled) {
-                this.getContext().startService(hbmIntent);
-            } else {
-                this.getContext().stopService(hbmIntent);
-            }
+            HBMModeSwitch.setEnabled(enabled, getContext());         
         }
         return true;
     }
