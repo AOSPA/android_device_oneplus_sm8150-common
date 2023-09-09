@@ -32,6 +32,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.audio.monitorRotation=true \
     ro.config.vc_call_vol_steps=6 \
     vendor.audio.cts.media=false \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.dolby.ds2.hardbypass=false \
     vendor.audio.noisy.broadcast.delay=600 \
     vendor.audio.offload.pstimeout.secs=3
 
