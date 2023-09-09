@@ -18,14 +18,18 @@
 package co.aospa.settings.DisplayMode.ModeSwitch;
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import androidx.preference.Preference;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceManager;
+import android.content.Intent;
+import android.os.UserHandle;
+
+import android.content.Context;
 
 import co.aospa.settings.DisplayMode.Utils;
 
-public class HBMModeSwitch implements OnPreferenceChangeListener {
+public class HBMModeSwitch {
+
+    public static final String ACTION_HBM_SERVICE_CHANGED =
+            "co.aospa.settings.DisplayMode.ModeSwitch.HBM_SERVICE_CHANGED";
+    public static final String EXTRA_HBM_STATE = "running";
 
     private static final String FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm";
 
@@ -44,10 +48,15 @@ public class HBMModeSwitch implements OnPreferenceChangeListener {
         return Utils.getFileValueAsBoolean(getFile(), false);
     }
 
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        Boolean enabled = (Boolean) newValue;
+    public static void setEnabled(boolean enabled, Context context) {
         Utils.writeValue(getFile(), enabled ? "5" : "0");
-        return true;
+        Intent hbmIntent = new Intent(context,
+                    co.aospa.settings.DisplayMode.HBMModeService.class);
+        if (enabled) context.startService(hbmIntent);
+        else context.stopService(hbmIntent);
+        Intent intent = new Intent(ACTION_HBM_SERVICE_CHANGED);
+        intent.putExtra(EXTRA_HBM_STATE, enabled);
+        intent.setFlags(Intent.FLAG_RECEIVER_REGISTERED_ONLY);
+        context.sendBroadcastAsUser(intent, UserHandle.CURRENT);;
     }
 }
