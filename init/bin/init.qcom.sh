@@ -315,9 +315,6 @@ case "$target" in
     "msm8909")
         start_vm_bms
         ;;
-    "msmnile")
-        start_msm_irqbalance_msmnile
-        ;;
     "kona")
         start_msm_irqbalance_kona
         ;;
