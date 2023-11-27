@@ -8,16 +8,19 @@ vendor/lib64/libadsp_default_listener.so
 # ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_dap_cpdp.so
+vendor/lib/rfsa/adsp/libBeautyShot_skel.so
+vendor/lib/rfsa/adsp/libSuperSensor_skel.so
+vendor/lib/rfsa/adsp/libVC1Dec.so
+vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so
 vendor/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so
-vendor/lib/rfsa/adsp/libBeautyShot_skel.so
 vendor/lib/rfsa/adsp/libcamera_nn_skel.so
 vendor/lib/rfsa/adsp/libcvpdsp_skel.so
+vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 vendor/lib/rfsa/adsp/libdsp_streamer_skel.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
@@ -26,9 +29,6 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
-vendor/lib/rfsa/adsp/libSuperSensor_skel.so
-vendor/lib/rfsa/adsp/libVC1Dec.so
-vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 
 # ANT+ - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|87dc1a131534659173e71e108e7a3ffe6325845f
@@ -37,13 +37,13 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so|87dc1a131534659173e71e108e7a3ffe6325845f
 vendor/firmware/tfa98xx.cnt
 
 # Audio libraries
+vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libhaptic_effect.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
-vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/liba2dpoffload.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
@@ -78,12 +78,18 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Camera
-vendor/bin/hw/vendor.oneplus.hardware.camera@1.0-service
 vendor/bin/hw/vendor.oneplus.hardware.CameraMDMHIDL@1.0-service
+vendor/bin/hw/vendor.oneplus.hardware.camera@1.0-service
 vendor/bin/vl53l1_daemon_main
-vendor/etc/init/vendor.oneplus.hardware.camera@1.0-service.rc
 vendor/etc/init/vendor.oneplus.hardware.CameraMDMHIDL@1.0-service.rc
+vendor/etc/init/vendor.oneplus.hardware.camera@1.0-service.rc
 vendor/etc/init/vl53l1.rc
+vendor/lib64/libSTDualCamCaptureWT.so
+vendor/lib64/libSonyIMX471RmscLibrary.so
+vendor/lib64/libSuperSensor.so
+vendor/lib64/libSuperSensorFallback.so
+vendor/lib64/libSuperSensorProcessor.so
+vendor/lib64/libSuperSensorProcessorCWrapper.so
 vendor/lib64/lib_bokehlib.so
 vendor/lib64/lib_oneplus_watermark.so
 vendor/lib64/libarcsoft_beautyshot.so
@@ -120,13 +126,7 @@ vendor/lib64/libcvp_common.so
 vendor/lib64/libmorpho_image_refiner.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libopcamera_native_modules.so
-vendor/lib64/libSonyIMX471RmscLibrary.so
 vendor/lib64/libstblur_capture_api.so
-vendor/lib64/libSTDualCamCaptureWT.so
-vendor/lib64/libSuperSensor.so
-vendor/lib64/libSuperSensorFallback.so
-vendor/lib64/libSuperSensorProcessor.so
-vendor/lib64/libSuperSensorProcessorCWrapper.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libtriplecam_image_optical_zoom.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
@@ -333,21 +333,21 @@ vendor/bin/qseecomd|1d406a3605c5969901be7640c4a6e9ada5e5d0a6
 vendor/etc/init/qseecomd.rc|0ebfb7c5d1d2459be4fdac951a182dc486f3bda7
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc|0f43244d70d5efc1e4f089b926a9dc4f59e53db1
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so|8ea0cfc08930bd0d93f2e6b0e53ca9151870db7c
+vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
+vendor/lib64/libGPreqcancel_svc.so|897a58845264ab512ee3a1041e608c8f16275556
+vendor/lib64/libQSEEComAPI.so|480bc3683426708cc91d45b1e1ab23e716540b46
+vendor/lib64/libSecureUILib.so|a46edde15128b5a26ce3b273778652e5663c6628
+vendor/lib64/libStDrvInt.so|6091f1f496b87730f9a77e9ede504c4fa99c608a
 vendor/lib64/libcpion.so|542fd1114d09ec5c0d6d8e44ed925a0ee226ce94
 vendor/lib64/libdrmfs.so|2e000862d1dba971796ba1223352af519ab86229
 vendor/lib64/libdrmtime.so|d7460a3d0d0a9ccc044688f960ca4b9c3c05cfd5
-vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
-vendor/lib64/libGPreqcancel_svc.so|897a58845264ab512ee3a1041e608c8f16275556
 vendor/lib64/libops.so|a6556e34f327dab506012db83169b5c53e7f1b0a
 vendor/lib64/libqisl.so|c79719eebc094c2af9561e8df2c158638b111b70
-vendor/lib64/libQSEEComAPI.so|480bc3683426708cc91d45b1e1ab23e716540b46
 vendor/lib64/librpmb.so|18b6b3297d117f093f2e4104384c4182052dd82f
 vendor/lib64/libsecureui.so|28f82685f84fb03637ec087dd4cace6122add1b3
 vendor/lib64/libsecureui_svcsock.so|6af612f057f4f28720d6db9b300b58c883da6539
-vendor/lib64/libSecureUILib.so|a46edde15128b5a26ce3b273778652e5663c6628
 vendor/lib64/libspl.so|e2b3e2dd28b0eee567d72de696cd1e01288ae06f
 vendor/lib64/libssd.so|e255c1453e1ea5b7e02555bf3301791aba370baf
-vendor/lib64/libStDrvInt.so|6091f1f496b87730f9a77e9ede504c4fa99c608a
 vendor/lib64/libtzdrmgenprov.so|bdc078935051b6c9e16bbf7fc4a8241410cea97a
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so|1b4c92c07ed5ba3f053e10a11f2bc1232ad45375
 
@@ -557,11 +557,6 @@ vendor/etc/libnfc-nci_wuhantong.conf
 vendor/etc/libnfc-nci_yangchengtong.conf
 vendor/etc/libnfc-nci_zhengzhoubus.conf
 vendor/etc/libnfc-nxp.conf
-vendor/etc/libnfc-nxp_beijingbus.conf
-vendor/etc/libnfc-nxp_changancard.conf
-vendor/etc/libnfc-nxp_noeSE.conf
-vendor/etc/libnfc-nxp_productline.conf
-vendor/etc/libnfc-nxp_productline_noeSE.conf
 vendor/etc/libnfc-nxp_RF.conf
 vendor/etc/libnfc-nxp_RF_beijingbus.conf
 vendor/etc/libnfc-nxp_RF_changancard.conf
@@ -573,6 +568,11 @@ vendor/etc/libnfc-nxp_RF_suzhoutong.conf
 vendor/etc/libnfc-nxp_RF_wuhantong.conf
 vendor/etc/libnfc-nxp_RF_yangchengtong.conf
 vendor/etc/libnfc-nxp_RF_zhengzhoubus.conf
+vendor/etc/libnfc-nxp_beijingbus.conf
+vendor/etc/libnfc-nxp_changancard.conf
+vendor/etc/libnfc-nxp_noeSE.conf
+vendor/etc/libnfc-nxp_productline.conf
+vendor/etc/libnfc-nxp_productline_noeSE.conf
 vendor/etc/libnfc-nxp_shenzhentong.conf
 vendor/etc/libnfc-nxp_suzhoutong.conf
 vendor/etc/libnfc-nxp_wuhantong.conf
@@ -585,14 +585,13 @@ vendor/lib64/hal_libnfc.so
 vendor/lib64/libchrome.so
 vendor/lib64/libp61-jcop-kit.so
 vendor/lib64/nfc_nci_nxp.so
+vendor/lib64/vendor.nxp.eventprocessor@1.0.so
 vendor/lib64/vendor.nxp.nxpese@1.0.so
 vendor/lib64/vendor.nxp.nxpnfc@1.0.so
-vendor/lib64/vendor.nxp.eventprocessor@1.0.so
 
 # OMX - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/lib/libAlacSwDec.so|cb41b0945e57b349e6aa476cdac4315ee13a2def
 vendor/lib/libApeSwDec.so|ce425ef9372ed6635e313422b3578f77b90ff526
-vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
 vendor/lib/libFlacSwDec.so|6b17d0965c9f8bddab3ffd59e7bb16e92bb68d85
 vendor/lib/libOmxAacDec.so|c3d19eb5668973a6d7b64133d1b607a384167875
 vendor/lib/libOmxAlacDec.so|17fbc925be0efdcfeb3473081016ba0203d6fea5
@@ -610,6 +609,7 @@ vendor/lib/libOmxSwVencMpeg4.so|d52be5900bb742bdf7202d580e788083153d8160
 vendor/lib/libOmxVideoDSMode.so|22dfbf532097386c411ab479aa177ed0b098b0cb
 vendor/lib/libOmxVpp.so|ff50ac05e0b97a6a1a018164cfd1e4d601fc170c
 vendor/lib/libOmxWmaDec.so|09ea4d8b190fbfcc61698c46f46c97b0f45fcdfc
+vendor/lib/libdsd2pcm.so|c5ab1afd7a5a23bf83d80b5ac74247c3dd2085af
 vendor/lib/libswvdec.so|443380c7092d69f47ff204549a7670a1573cd922
 vendor/lib64/libAlacSwDec.so|e520eafd5dd9ee29456b60f4668ea94394a61a63
 vendor/lib64/libApeSwDec.so|76d3cc02ca1c3cdc3c71e57dc6e53027d2bf3d37
@@ -638,8 +638,8 @@ vendor/etc/init/init.opf.rc
 vendor/bin/hw/vendor.oneplus.hardware.param@1.0-service
 vendor/etc/init/vendor.oneplus.hardware.param@1.0-service.rc
 vendor/lib/vendor.oneplus.hardware.param@1.0.so
-vendor/lib64/vendor.oneplus.hardware.param@1.0.so
 vendor/lib64/libparam_vendor.so
+vendor/lib64/vendor.oneplus.hardware.param@1.0.so
 
 # Peripheral manager - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/pm-proxy|c36785c811db9af0d6d938cdbc6b90dedaaf706e
@@ -674,15 +674,15 @@ vendor/lib/libidl.so|f91eebf917150514da6c111de6c66805bed3f6c8
 vendor/lib/libmdmdetect.so|0105abde3eead7e5292d1c0823327f0969751e88
 vendor/lib/libqcci_legacy.so|be14a3ba29cf4dc9fce1f7a51fb02cb775b16f1c
 vendor/lib/libqmi.so|1373b956b34e1e9af7b2773ec2e41e410f3896cf
-vendor/lib/libqmiservices.so|a60531847ff655ae54c9e8397d8c5386f00fbca3
+vendor/lib/libqmi_cci.so|562adb68874a9089532264f18e1c56b6f489f6ff
 vendor/lib/libqmi_client_helper.so|7577d836dcbc518a2918cc96db9f86ed0756167f
 vendor/lib/libqmi_client_qmux.so|08efbaeb9119d305aacbdfc697d07c192de03abd
-vendor/lib/libqmi_cci.so|562adb68874a9089532264f18e1c56b6f489f6ff
+vendor/lib/libqmi_common_so.so|ff25aa6185ebf0700fd5c7d913f383bcd09ea866
 vendor/lib/libqmi_csi.so|73749863f412035d1822f58f177ea27b0810387d
 vendor/lib/libqmi_csvt_srvc.so|4f7890a0f6c80436341e639a3179b78495594612
-vendor/lib/libqmi_common_so.so|ff25aa6185ebf0700fd5c7d913f383bcd09ea866
 vendor/lib/libqmi_encdec.so|d8642bf7e8193db310dafad8116222f3b3d9013a
 vendor/lib/libqmi_legacy.so|7805ed3a940405d88d4b7dd29516c68ee19c5b08
+vendor/lib/libqmiservices.so|a60531847ff655ae54c9e8397d8c5386f00fbca3
 vendor/lib/libqrtr.so|89e9808e264dc47648c18549a4eedc2169b9c6ef
 vendor/lib/libqsocket.so|bc42794c439b8a767e87b60071e3827a793218aa
 vendor/lib/libsmemlog.so|bae2c5f4cd959cf3f4e0f4420dfc8b4d0719f7f8
@@ -692,15 +692,15 @@ vendor/lib64/libidl.so|857f7a75a51ade7d3621f7fa6da0e9461244ca01
 vendor/lib64/libmdmdetect.so|4dee2a700aad658f3f30a6da069c867307ed371c
 vendor/lib64/libqcci_legacy.so|0e78c75ce59453a09cc1d6bcba0507cab9ae663a
 vendor/lib64/libqmi.so|0899b0d045a5c5801da324e3359dea2654c9dfbe
-vendor/lib64/libqmiservices.so|d3f7a54cc94a60286dec89caa2dd843da79b51c4
+vendor/lib64/libqmi_cci.so|4d48845f07742c7084920bf8c5a2cfcf7364daec
 vendor/lib64/libqmi_client_helper.so|b49679c48c9573f0121637c4f1e1e026c2392b8f
 vendor/lib64/libqmi_client_qmux.so|4d74a8417f25617f061160163dca32730608e042
 vendor/lib64/libqmi_common_so.so|d817b576a054dd91e8e4346d73e6d635d221bfde
-vendor/lib64/libqmi_cci.so|4d48845f07742c7084920bf8c5a2cfcf7364daec
 vendor/lib64/libqmi_csi.so|7e19c2266b7f63f3f9e69c039b1446acd460231b
 vendor/lib64/libqmi_csvt_srvc.so|f1a3bc5d8e48e8bc3464b6a9ad652a7553240c79
 vendor/lib64/libqmi_encdec.so|a18bb21e5b9b53e3dc8dc45f6e7e65e32a467607
 vendor/lib64/libqmi_legacy.so|f324c6701ecf78ff50975c0bc7f99aea09cb3539
+vendor/lib64/libqmiservices.so|d3f7a54cc94a60286dec89caa2dd843da79b51c4
 vendor/lib64/libqrtr.so|3ea4f27b261a1a5ddeee02e9561dc040ddb26514
 vendor/lib64/libqsocket.so|3fa01c9aff6ed96a5ea9886c7696a046c929e339
 vendor/lib64/libsmemlog.so|d9ce43b21abf453c58b892ecbfa42b98bc276bc7
@@ -753,15 +753,16 @@ vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so|afc8812c3eee1fce085bf224a
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so|37645f528cd92a2ea487a6ba925b667c4c29eb0a
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.6.so|e8115942c8e041f2f594018d8a2a018103a5fcb5
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.7.so|6f642585f2708cd47257d48f4d56dcd7cea6a8e2
+vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so|5bfd666e62aed31a272ea2f7cd6e699778aeec92
+vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so|74cd56e716d8401e87a9f0914f4840539bdc30d4
+vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so|cfdfdd616ff0704809f2ec37b1c9e94b8ffb77a1
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|5ec80005a20a2ef66bae99801f2ba060c7e204bb
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so|663b65448ec8f5972337e1bbdc08ef5d4b08e8fa
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so|3ffb7301b6c185b114157c5423de604e5ba93ade
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|75a58827c0b4e06e2ca8163b6a904dab2af3be6a
-vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so|5bfd666e62aed31a272ea2f7cd6e699778aeec92
-vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so|74cd56e716d8401e87a9f0914f4840539bdc30d4
-vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so|cfdfdd616ff0704809f2ec37b1c9e94b8ffb77a1
-vendor/radio/qcril_database/qcril.db|5256b3d5cce46578507abc978c4be1febcf513b9
 vendor/radio/qcril_database/upgrade/0_initial.sql|e00b243261d8941802bdea9d4e659dc5e927c216
+vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql|1ca05b047116cbc776f71d3bdba4952b18b04229
+vendor/radio/qcril_database/upgrade/11_version_update_ecc_table.sql|ab2580e3e25fb02936eb760cba85f3b6139b8d34
 vendor/radio/qcril_database/upgrade/1_version_intro.sql|67b96cb3e94737bfe271b2519b9eb5fae17373a2
 vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql|b4a825ba20fea3e2f20c7f02c8bd64596c24a75e
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql|0571aacaf9fc0868c48bba2f7542f5b4e68c9022
@@ -771,8 +772,7 @@ vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql|0fdf4b6ccb489
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|9a76d5747da2876b87b214579c9d74ae92d218d7
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql|a0603a5c46e8e67f78bdb42f2b246ecc6a37cecd
 vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql|4701219a79190995eda651e5c45e11c9b111a478
-vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql|1ca05b047116cbc776f71d3bdba4952b18b04229
-vendor/radio/qcril_database/upgrade/11_version_update_ecc_table.sql|ab2580e3e25fb02936eb760cba85f3b6139b8d34
+vendor/radio/qcril_database/qcril.db|5256b3d5cce46578507abc978c4be1febcf513b9
 
 # RemoteFS - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/rmt_storage|7c6de0012d6150cf6f7a1944e91dcac9778d89f0
@@ -795,9 +795,9 @@ vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib64/libopf.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
-vendor/lib64/libopf.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
