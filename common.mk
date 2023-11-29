@@ -265,7 +265,8 @@ PRODUCT_PACKAGES += \
     AOSPAOnePlusSM8150SystemUI \
     OnePlusSM8150Frameworks \
     OnePlusSM8150Settings \
-    OnePlusSM8150SystemUI
+    OnePlusSM8150SystemUI\
+    WifiResTargetMainline
 
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
