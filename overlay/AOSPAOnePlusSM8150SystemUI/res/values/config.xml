@@ -14,9 +14,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Allow devices override audio panel location to the left side -->
-    <bool name="config_audioPanelOnLeftSide">true</bool>
-
     <!-- The location of the devices physical tri state switch
          0: Left side
          1: Right side -->
