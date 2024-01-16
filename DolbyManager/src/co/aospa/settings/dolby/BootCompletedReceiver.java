@@ -18,10 +18,20 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        if (!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-            return;
+        if (DEBUG) Log.i(TAG, "Received intent: " + intent.getAction());
+        switch (intent.getAction()) {
+            case Intent.ACTION_LOCKED_BOOT_COMPLETED:
+                onLockedBootCompleted(context);
+                break;
+            case Intent.ACTION_BOOT_COMPLETED:
+                onBootCompleted(context);
+                break;
         }
-        if (DEBUG) Log.d(TAG, "Received boot completed intent");
-        DolbyUtils.getInstance(context);
+    }
+
+    private static void onLockedBootCompleted(Context context) {
+    }
+
+    private static void onBootCompleted(Context context) {
     }
 }
