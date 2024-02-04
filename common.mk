@@ -139,6 +139,14 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.dolby.manufacturer=OPLUS \
     ro.vendor.dolby.brand=OPLUS
 
+# ParanoidDoze
+PRODUCT_PACKAGES += \
+    ParanoidDoze
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.sensor.pickup=android.sensor.tilt_detector \
+    ro.sensor.pickup.value=0
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_idle_timer_ms=2500 \
     ro.surface_flinger.set_touch_timer_ms=2500 \
