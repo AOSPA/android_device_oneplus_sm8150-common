@@ -80,4 +80,7 @@
          auto-brightness adjustment setting. -->
     <fraction name="config_autoBrightnessAdjustmentMaxGamma">150%</fraction>
 
+    <!-- Pocket Lock -->
+    <bool name="config_pocketModeLightSensorSupported">false</bool>
+
 </resources>
