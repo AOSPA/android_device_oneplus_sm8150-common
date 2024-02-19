@@ -33,7 +33,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.config.vc_call_vol_steps=6 \
     vendor.audio.cts.media=false \
     vendor.audio.noisy.broadcast.delay=600 \
-    vendor.audio.offload.pstimeout.secs=3
+    vendor.audio.offload.pstimeout.secs=3 \
+    vendor.audio.feature.compr_voip.enable=true
 
 PRODUCT_VENDOR_OVERRIDES += \
     vendor.audio.offload.buffer.size.kb=256
